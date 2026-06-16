@@ -69,9 +69,9 @@ struct SignInView: View {
                                     backgroundColor: Color(hex: "#007FFF")
                                 )
                                 .padding(.trailing, 40)
+                                .padding(.bottom, 30)
 
                             }
-
                             
                         Divider()
                             .padding(.bottom, 30)
@@ -83,16 +83,12 @@ struct SignInView: View {
                             .padding(.bottom, 25)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, geometry.safeAreaInsets.top + geometry.size.height * 40 / 100)
-                        
-                        RoundedButton(title: "Continue with Google") {
-                            
-                        }
+                    .padding(.top, geometry.safeAreaInsets.top + geometry.size.height * 35 / 100)
+
+                        RoundedButton(title: "Continue with Google") {}
                         .padding(.trailing, 40)
                         
-                        RoundedButton(title: "Continue with Facebook") {
-                            
-                        }
+                        RoundedButton(title: "Continue with Facebook") {}
                         .padding(.trailing, 40)
                 }
             }

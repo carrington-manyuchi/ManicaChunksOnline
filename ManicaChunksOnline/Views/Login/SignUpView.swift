@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @StateObject private var viewModel: MainViewModel = MainViewModel()
+    @StateObject private var viewModel: MainViewModel = MainViewModel.shared
     var body: some View {
         GeometryReader { geometry in
             
@@ -40,8 +40,8 @@ struct SignUpView: View {
                     LineTextField(
                         title: "Username",
                         placeholder: "Enter your username",
-                        txt: $viewModel.emailText,
-                        keyboardType: .emailAddress
+                        txt: $viewModel.usernameText,
+                        keyboardType: .default
                     )
                     .padding(.bottom, geometry.size.width * 7/100)
                     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel =  MainViewModel()
+    @ObservedObject var viewModel =  MainViewModel.shared
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -70,7 +70,7 @@ struct LoginView: View {
                     .padding(.bottom, geometry.size.height * 1.5/100)
 
                     NavigationLink {
-                        
+                        SignUpView()
                     } label: {
                         HStack {
                             Text("Don't have an account?")
