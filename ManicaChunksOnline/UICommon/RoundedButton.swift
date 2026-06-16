@@ -24,7 +24,6 @@ struct RoundedButton: View {
         .frame(height: 55)
         .background(Color.primaryApp)
         .clipShape(RoundedRectangle(cornerRadius: 20))
-
     }
 }
 

@@ -21,7 +21,7 @@ struct SignInView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: geometry.size.width,
-                               height: geometry.size.height / 6)
+                               height: geometry.size.height * 2/100)
                 }
                     ScrollView {
                         VStack(alignment: .leading) {
@@ -50,7 +50,29 @@ struct SignInView: View {
                             TextField("Enter Mobile", text: $txtMobile)
                                 .frame(minWidth: 0, maxWidth: .infinity)
                         }
-                        
+                            
+                            NavigationLink {
+                                LoginView()
+                            } label: {
+                                RoundButton(
+                                    title: "Continue with Email Sign In",
+                                    backgroundColor: Color(hex: "#00A1FF")
+                                )
+                                .padding(.trailing, 40)
+                            }
+
+                            NavigationLink {
+                                SignUpView()
+                            } label: {
+                                RoundButton(
+                                    title: "Continue with Email Sign Up",
+                                    backgroundColor: Color(hex: "#007FFF")
+                                )
+                                .padding(.trailing, 40)
+
+                            }
+
+                            
                         Divider()
                             .padding(.bottom, 30)
                         

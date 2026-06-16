@@ -12,7 +12,6 @@ struct SignUpView: View {
     var body: some View {
         GeometryReader { geometry in
             
-            
             ZStack {
                 Image("bottom_up")
                     .resizable()
@@ -105,6 +104,13 @@ struct SignUpView: View {
                     }
                 }
             }
+        }
+        .alert(isPresented: $viewModel.showError) {
+            Alert(
+                title: Text(Globs.AppName),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text("Ok"))
+            )
         }
         .navigationTitle("")
         .toolbarVisibility(.hidden, for: .tabBar)

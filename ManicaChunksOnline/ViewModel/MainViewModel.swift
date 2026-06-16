@@ -10,12 +10,15 @@ import SwiftUI
 import Combine
 
 final class MainViewModel: ObservableObject {
+    static var shared: MainViewModel = MainViewModel()
     @Published var usernameText: String = ""
     @Published var emailText: String = ""
     @Published var passwordText: String = ""
     @Published var isShowPassword: Bool = false
     @Published var showError: Bool = false
     @Published var  errorMessage: String = ""
+    @Published var isUserLogin: Bool = false
+   // @Publishedvar userObj: UserModel = UserMode
     
     init() {
         #if DEBUG

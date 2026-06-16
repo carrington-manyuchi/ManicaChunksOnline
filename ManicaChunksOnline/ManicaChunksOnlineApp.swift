@@ -9,10 +9,16 @@ import SwiftUI
 
 @main
 struct ManicaChunksOnlineApp: App {
+    @StateObject var mainViewModel = MainViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                WelcomeView()
+                if mainViewModel.isUserLogin {
+                    MainTabView()
+                } else {
+                    WelcomeView()
+                }
             }
         }
     }
