@@ -9,7 +9,37 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            ZStack {
+                Image("bottom_bg")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                
+                
+                VStack {
+                    Image("color_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(.bottom, 30)
+                    
+                    Text("Login")
+                        .font(.gilroyCustomFont(.semibold, fontSize: 26))
+                        .foregroundStyle(Color.primaryText)
+                        .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                    
+                    Text("Enter your email and password")
+                        .font(.gilroyCustomFont(.semibold, fontSize: 16))
+                        .foregroundStyle(Color.secondaryText)
+                    
+                    
+                    
+                    
+                }
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 
