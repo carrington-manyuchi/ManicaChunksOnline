@@ -112,6 +112,9 @@ struct LoginView: View {
                 dismissButton: .default(Text("Ok"))
             )
         }
+        .navigationDestination(isPresented: $viewModel.isUserLogin, destination: {
+            HomeView()
+        })
         .ignoresSafeArea()
         .navigationTitle("")
         .background(Color.white)
