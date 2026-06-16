@@ -107,6 +107,10 @@ struct LoginView: View {
             }
         }
         .ignoresSafeArea()
+        .navigationTitle("")
+        .background(Color.white)
+        .navigationBarBackButtonHidden(true)
+        .toolbarVisibility(.hidden, for: .navigationBar)
     }
 }
 
