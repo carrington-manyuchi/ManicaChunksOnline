@@ -9,13 +9,13 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        GeometryReader {  in
+        GeometryReader { geometery in
             
             ZStack {
                 Image("welcom_bg")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: .screenWidth, height: .screenHeight)
+                    .frame(width: geometery.size.width, height: geometery.size.height)
                 
                 VStack {
                     Spacer()
@@ -34,12 +34,14 @@ struct WelcomeView: View {
                         .font(.gilroyCustomFont(.medium, fontSize: 16))
                         .foregroundStyle(.white.opacity(0.7))
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 25)
+                        .padding(.bottom, geometery.size.width * 7/100)
                     
-                    RoundedButton(title: "Get Started") { }
-                    
-                    Spacer()
-                        .frame(height: 80)
+                    NavigationLink {
+                        SignInView()
+                    } label: {
+                        RoundedButton(title: "Get Started")
+                            .padding(.bottom, geometery.size.height * 8/100)
+                    }
                 }
                 .padding(.horizontal, 20)
             }
