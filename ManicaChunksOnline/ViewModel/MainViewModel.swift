@@ -24,7 +24,6 @@ final class MainViewModel: ObservableObject {
 #if DEBUG
         emailText = "test@gmail.com"
         passwordText = "123456"
-        
 #endif
     }
     

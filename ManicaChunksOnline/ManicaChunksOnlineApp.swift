@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ManicaChunksOnlineApp: App {
-    @StateObject var mainViewModel = MainViewModel()
+    @StateObject var mainViewModel = MainViewModel.shared
     
     var body: some Scene {
         WindowGroup {
