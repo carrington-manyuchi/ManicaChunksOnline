@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @StateObject var viewModel =  MainViewModel()
     @Environment(\.dismiss) var dismiss
-    @State var emailText: String = ""
-    @State var passwordText: String = ""
-    @State var isShowPassword: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -42,7 +41,7 @@ struct LoginView: View {
                     LineTextField(
                         title: "Email",
                         placeholder: "Enter your email address",
-                        txt: $emailText,
+                        txt: $viewModel.emailText,
                         keyboardType: .emailAddress
                     )
                     .padding(.bottom, geometry.size.height * 3/100)
@@ -50,8 +49,8 @@ struct LoginView: View {
                     LineSecureField(
                         title: "Password",
                         placeholder: "Enter your password",
-                        txt: $passwordText,
-                        isShowPassword: $isShowPassword
+                        txt: $viewModel.passwordText,
+                        isShowPassword: $viewModel.isShowPassword
                     )
                     .padding(.bottom, geometry.size.height * 1/100)
 
@@ -66,7 +65,7 @@ struct LoginView: View {
                     .padding(.bottom, geometry.size.height * 3/100)
 
                     RoundButton(title: "Log In") {
-                        
+                        viewModel.serviceCallLogin()
                     }
                     .padding(.bottom, geometry.size.height * 1.5/100)
 
@@ -105,6 +104,13 @@ struct LoginView: View {
                 .padding(.horizontal)
                 .padding(.top, geometry.size.height * 8/100)
             }
+        }
+        .alert(isPresented: $viewModel.showError) {
+            Alert(
+                title: Text(Globs.AppName),
+                message: Text(viewModel.errorMessage),
+                dismissButton: .default(Text("Ok"))
+            )
         }
         .ignoresSafeArea()
         .navigationTitle("")
