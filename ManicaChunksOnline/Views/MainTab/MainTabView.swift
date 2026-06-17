@@ -9,18 +9,19 @@ import SwiftUI
 import SwiftUI
 
 struct MainTabView: View {
+    @StateObject private var homeViewModel = HomeViewModel.shared
     @StateObject private var viewModel = MainViewModel.shared
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Home")
+            HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
                 .tag(0)
             
-            Text("Explore")
+            ExploreView()
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }
@@ -32,17 +33,20 @@ struct MainTabView: View {
                 }
                 .tag(2)
             
-            Text("Favorites")
+            FavoritesView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart.fill")
                 }
                 .tag(3)
             
-            Text("Profile")
+            ProfileView()
                 .tabItem {
-                    Label("Profile", systemImage: "person.fill")
-                }
-                .tag(4)
+                Label("Profile", systemImage: "person.fill")
+            }
+            .tag(4)
+        }
+        .onAppear {
+            UIScrollView.appearance().isScrollEnabled = false
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
