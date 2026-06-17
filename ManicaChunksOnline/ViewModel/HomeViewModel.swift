@@ -11,6 +11,7 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     static var shared: HomeViewModel = HomeViewModel()
+    @State var textSearch = "Search text"
     
     @State var selectedTab: Int = 0
     

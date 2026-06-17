@@ -17,7 +17,6 @@ struct SearchTextField: View {
                 .textInputAutocapitalization(.none)
                 .autocorrectionDisabled(true)
                 .frame(minWidth: 0, maxWidth: .infinity)
-            
         }
     }
 }
