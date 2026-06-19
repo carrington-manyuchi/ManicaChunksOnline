@@ -1,7 +1,6 @@
 # 🛒 ManicaChunksOnline
 
-A modern e-commerce iOS application built with SwiftUI that provides a seamless grocery shopping experience. The app features user authentication, product browsing, category filtering, and a clean, intuitive interface.
-
+A modern e-commerce iOS application built with SwiftUI that demonstrates clean architecture, reusable components, and robust error handling on registration and login screens.
 <table>
   <tr>
     <td><img src="https://github.com/carrington-manyuchi/ManicaChunksOnline/blob/aa4da4c404d7b4efed0cfcfbbaba8ada3e1756d3/Simulator%20Screenshot%20-%20iPhone%2017%20Pro%20-%202026-06-19%20at%2022.57.33.png" width="200" /></td>
@@ -12,19 +11,18 @@ A modern e-commerce iOS application built with SwiftUI that provides a seamless 
   <tr>
     <td align="center">Welcome</td>
     <td align="center">Sign In</td>
-    <td align="center">Home</td>
-    <td align="center">Products</td>
+    <td align="center">Validation</td>
+    <td align="center">Registration</td>
   </tr>
 </table>
 
-## 📱 Features
+## 📱 UI Focus Areas
 
-- **User Authentication**: Secure sign-up and login functionality with validation
-- **Product Discovery**: Browse products by categories with search capability
-- **Shopping Cart**: Add and manage items in your cart
-- **Favorites**: Save products for later purchase
-- **Profile Management**: User profile and order history
-- **Responsive Design**: Optimized for various iOS devices with adaptive layouts
+- **Authentication Flow**: Sign Up, Sign In with comprehensive validation
+- **Error Handling**: User-friendly error messages and validation states
+- **Reusable Components**: Custom text fields, buttons, and form elements
+- **MVVM Architecture**: Clean separation of concerns
+- **Protocol-Oriented Programming**: Network abstraction and component protocols
 
 ## 🛠️ Technical Skills Demonstrated
 
