@@ -2,6 +2,21 @@
 
 A modern e-commerce iOS application built with SwiftUI that provides a seamless grocery shopping experience. The app features user authentication, product browsing, category filtering, and a clean, intuitive interface.
 
+<table>
+  <tr>
+    <td><img src="https://github.com/carrington-manyuchi/ManicaChunksOnline/blob/aa4da4c404d7b4efed0cfcfbbaba8ada3e1756d3/Simulator%20Screenshot%20-%20iPhone%2017%20Pro%20-%202026-06-19%20at%2022.57.33.png" width="200" /></td>
+    <td><img src="https://github.com/carrington-manyuchi/ManicaChunksOnline/blob/aa4da4c404d7b4efed0cfcfbbaba8ada3e1756d3/Simulator%20Screenshot%20-%20iPhone%2017%20Pro%20-%202026-06-19%20at%2022.57.46.png" width="200" /></td>
+    <td><img src="https://github.com/carrington-manyuchi/ManicaChunksOnline/blob/aa4da4c404d7b4efed0cfcfbbaba8ada3e1756d3/Simulator%20Screenshot%20-%20iPhone%2017%20Pro%20-%202026-06-19%20at%2022.58.13.png" width="200" /></td>
+    <td><img src="https://github.com/carrington-manyuchi/ManicaChunksOnline/blob/aa4da4c404d7b4efed0cfcfbbaba8ada3e1756d3/Simulator%20Screenshot%20-%20iPhone%2017%20Pro%20-%202026-06-19%20at%2022.58.32.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Welcome</td>
+    <td align="center">Sign In</td>
+    <td align="center">Home</td>
+    <td align="center">Products</td>
+  </tr>
+</table>
+
 ## 📱 Features
 
 - **User Authentication**: Secure sign-up and login functionality with validation
